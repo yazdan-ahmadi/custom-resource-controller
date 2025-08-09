@@ -1,0 +1,26 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: staticsites.devops.greenplus.com
+spec:
+  group: devops.crd.com
+  names:
+    kind: StaticSite
+    plural: staticsites
+    singular: staticsite
+  scope: Namespaced
+  versions:
+    - name: v1alpha1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                subdomain:
+                  type: string
+                content:
+                  type: string
