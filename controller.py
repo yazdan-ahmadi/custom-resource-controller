@@ -12,9 +12,9 @@ networking_api = kubernetes.client.NetworkingV1Api()
 
 # Configuration
 CF_API_URL = "https://api.cloudflare.com/client/v4"
-CLOUDFLARE_API_TOKEN = "2P1fnXvTFjz4PGbcrQ0VJgawJbtf-bL6cMruPLy1"
-HAPROXY_NODE_IP = "185.255.91.112"
-CLOUDFLARE_ZONE_NAME = "devops-registry.sbs"
+CLOUDFLARE_API_TOKEN = "your cloudflare API token"
+HAPROXY_NODE_IP = "loadbalancer node IP"  ## if you have loadbalancer
+CLOUDFLARE_ZONE_NAME = "your domain"
 
 session = requests.Session()
 session.headers.update({
